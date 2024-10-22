@@ -17,8 +17,7 @@ describe('classNames', () => {
             'someClass',
             { hovered: true, scrollable: true },
             ['class1', 'class2'],
-        ))
-            .toBe(expected);
+        )).toBe(expected);
     });
 
     test('with mods false', () => {
