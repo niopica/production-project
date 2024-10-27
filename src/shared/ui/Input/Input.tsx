@@ -10,12 +10,12 @@ interface inputProps extends HTMLInputProps {
     className?: string;
     value?: string;
     onChange?: (value: string) => void;
-    autoFocus?: boolean;
+    autofocus?: boolean;
 }
 
 export const Input = memo((props: inputProps) => {
     const {
-        className, value, onChange, type = 'text', placeholder, autoFocus, ...othetProps
+        className, value, onChange, type = 'text', placeholder, autofocus, ...othetProps
     } = props;
 
     const ref = useRef<HTMLInputElement>(null);
@@ -23,11 +23,11 @@ export const Input = memo((props: inputProps) => {
     const [caretPosition, setCaretPosition] = useState(0);
 
     useEffect(() => {
-        if (autoFocus) {
+        if (autofocus) {
             setIsFocus(true);
             ref.current?.focus();
         }
-    }, [autoFocus]);
+    }, [autofocus]);
 
     const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
         onChange?.(e.target.value);
