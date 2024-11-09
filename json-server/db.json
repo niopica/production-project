@@ -26,11 +26,11 @@
     }
   ],
   "profile": {
-    "first": "Никита",
+    "first": "Кирилл",
     "lastname": "Галанзовский",
     "age": 22,
-    "currency": "USD",
-    "country": "Russia",
+    "currency": "EUR",
+    "country": "Ukraine",
     "city": "Astana",
     "username": "admin",
     "avatar": "https://i.pinimg.com/564x/f5/ca/62/f5ca62e9cec5bbb11d6aaafd3c3ea37a.jpg"
