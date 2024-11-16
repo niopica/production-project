@@ -102,6 +102,12 @@
       "text": "some comment 3",
       "articleId": "1",
       "userId": "1"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "Новый пользователь оставил комментарий",
+      "id": "asyeYAb"
     }
   ],
   "users": [
@@ -120,14 +126,28 @@
       "avatar": "https://ru.pinterest.com/pin/25473554135905177/"
     }
   ],
-  "profile": {
-    "first": "jgh",
-    "lastname": "asf",
-    "age": 465,
-    "currency": "RUB",
-    "country": "Belarus",
-    "city": "Moscow",
-    "username": "admin213",
-    "avatar": "https://avatars.mds.yandex.net/get-zen_doc/3413519/pub_5ff887b2fe4e686f6ae6ba3f_5ff887d7f906b16872a69755/scale_1200"
-  }
+  "profile": [
+    {
+      "id": "1",
+      "first": "Kirill",
+      "lastname": "Molchanov",
+      "age": 23,
+      "currency": "RUB",
+      "country": "Belarus",
+      "city": "Moscow",
+      "username": "kiopica",
+      "avatar": "https://i.pinimg.com/736x/57/c6/3a/57c63a867fe6563d7ced0f8e7220897e.jpg"
+    },
+    {
+      "id": "2",
+      "first": "Nikita",
+      "lastname": "Galanzovskiy",
+      "age": 22,
+      "currency": "RUB",
+      "country": "Russia",
+      "city": "Moscow",
+      "username": "niopica",
+      "avatar": "https://i.pinimg.com/736x/7c/48/ec/7c48ec873ffd535ed5ac251e95065586.jpg"
+    }
+  ]
 }
