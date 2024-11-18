@@ -7,13 +7,13 @@ const data = {
     username: 'admin',
     age: 22,
     country: Country.Ukraine,
-    lastname: 'Ulbi tv',
+    lastname: 'ulbi tv',
     first: 'asd',
     city: 'asf',
     currency: Currency.USD,
 };
 
-describe('validateProfileData test', () => {
+describe('validateProfileData.test', () => {
     test('success', async () => {
         const result = validateProfileData(data);
 

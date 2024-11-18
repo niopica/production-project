@@ -4,7 +4,7 @@ import cls from './Select.module.scss';
 
 export interface SelectOption {
     value: string;
-    content: string
+    content: string;
 }
 
 interface SelectProps {
@@ -21,14 +21,14 @@ export const Select = memo((props: SelectProps) => {
         className,
         label,
         options,
+        onChange,
         value,
         readonly,
-        onChange,
     } = props;
 
     const onChangeHandler = (e: ChangeEvent<HTMLSelectElement>) => {
         if (onChange) {
-            onChange?.(e.target.value);
+            onChange(e.target.value);
         }
     };
 
@@ -51,7 +51,12 @@ export const Select = memo((props: SelectProps) => {
                     {`${label}>`}
                 </span>
             )}
-            <select disabled={readonly} className={cls.select} name="" id="" value={value} onChange={onChangeHandler}>
+            <select
+                disabled={readonly}
+                className={cls.select}
+                value={value}
+                onChange={onChangeHandler}
+            >
                 {optionsList}
             </select>
         </div>

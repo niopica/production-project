@@ -36,7 +36,7 @@ export const onlyText = Template.bind({});
 onlyText.args = {
     text: 'Description Description Description Description',
 };
-//
+
 export const PrimaryDark = Template.bind({});
 PrimaryDark.args = {
     title: 'Title lorem ipsun',
@@ -56,7 +56,6 @@ onlyTextDark.args = {
 };
 onlyTextDark.decorators = [ThemeDecorator(Theme.DARK)];
 
-//
 export const SizeL = Template.bind({});
 SizeL.args = {
     title: 'Title lorem ipsun',

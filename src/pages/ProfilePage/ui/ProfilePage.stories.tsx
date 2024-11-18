@@ -2,11 +2,10 @@ import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
-import ProfilePage from 'pages/ProfiilePage/ui/ProfilePage';
+import ProfilePage from 'pages/ProfilePage/ui/ProfilePage';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 import { Country } from 'entities/Country';
 import { Currency } from 'entities/Currency';
-import Avatar from 'shared/assets/tests/storybook.jpg';
 
 export default {
     title: 'pages/ProfilePage',
@@ -26,7 +25,7 @@ Normal.decorators = [StoreDecorator({
             username: 'admin',
             age: 22,
             country: Country.Ukraine,
-            lastname: 'Ulbi tv',
+            lastname: 'ulbi tv',
             first: 'asd',
             city: 'asf',
             currency: Currency.USD,
@@ -42,7 +41,7 @@ Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({
             username: 'admin',
             age: 22,
             country: Country.Ukraine,
-            lastname: 'Ulbi tv',
+            lastname: 'ulbi tv',
             first: 'asd',
             city: 'asf',
             currency: Currency.USD,

@@ -12,11 +12,11 @@ export const addCommentForArticle = createAsyncThunk<
     string,
     ThunkConfig<string>
 >(
-    'articleDetails/AddCommentForArticle',
-    async (text, thunkAPI) => {
+    'articleDetails/addCommentForArticle',
+    async (text, thunkApi) => {
         const {
             extra, dispatch, rejectWithValue, getState,
-        } = thunkAPI;
+        } = thunkApi;
 
         const userData = getUserAuthData(getState());
         const article = getArticleDetailsData(getState());
@@ -39,7 +39,7 @@ export const addCommentForArticle = createAsyncThunk<
             dispatch(fetchCommentsByArticleId(article.id));
 
             return response.data;
-        } catch (error) {
+        } catch (e) {
             return rejectWithValue('error');
         }
     },
