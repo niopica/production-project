@@ -1,9 +1,10 @@
 import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
+
 import { ArticleDetailsPageHeader } from './ArticleDetailsPageHeader';
 
 export default {
-    title: 'pages/ArticleDetailsPageHeader',
+    title: 'shared/ArticleDetailsPageHeader',
     component: ArticleDetailsPageHeader,
     argTypes: {
         backgroundColor: { control: 'color' },

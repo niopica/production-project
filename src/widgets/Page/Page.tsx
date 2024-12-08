@@ -1,7 +1,7 @@
-import React, {
-    memo, MutableRefObject, useRef, UIEvent,
-} from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
+import {
+    memo, MutableRefObject, ReactNode, UIEvent, useRef,
+} from 'react';
 import { useInfiniteScroll } from 'shared/lib/hooks/useInfiniteScroll/useInfiniteScroll';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { getUIScrollByPath, uiActions } from 'features/UI';
@@ -14,7 +14,7 @@ import cls from './Page.module.scss';
 
 interface PageProps {
     className?: string;
-    children: React.ReactNode;
+    children: ReactNode;
     onScrollEnd?: () => void;
 }
 
@@ -26,7 +26,9 @@ export const Page = memo((props: PageProps) => {
     const triggerRef = useRef() as MutableRefObject<HTMLDivElement>;
     const dispatch = useAppDispatch();
     const { pathname } = useLocation();
-    const scrollPositiom = useSelector((state: StateSchema) => getUIScrollByPath(state, pathname));
+    const scrollPosition = useSelector(
+        (state: StateSchema) => getUIScrollByPath(state, pathname),
+    );
 
     useInfiniteScroll({
         triggerRef,
@@ -35,11 +37,10 @@ export const Page = memo((props: PageProps) => {
     });
 
     useInitialEffect(() => {
-        wrapperRef.current.scrollTop = scrollPositiom;
+        wrapperRef.current.scrollTop = scrollPosition;
     });
 
     const onScroll = useThrottle((e: UIEvent<HTMLDivElement>) => {
-        console.log('SCROLL');
         dispatch(uiActions.setScrollPosition({
             position: e.currentTarget.scrollTop,
             path: pathname,

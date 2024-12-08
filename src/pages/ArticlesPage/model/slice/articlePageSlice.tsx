@@ -1,8 +1,9 @@
 import { createEntityAdapter, createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { StateSchema } from 'app/providers/StoreProvider';
-import { Article, ArticleType, ArticleView } from 'entities/Article';
-import { ARTCLE_VIEW_LOCALSTORAGE_KEY } from 'shared/const/localstorage';
-import { ArticleSortField } from 'entities/Article/model/types/article';
+import {
+    Article, ArticleType, ArticleView, ArticleSortField,
+} from 'entities/Article';
+import { ARTICLES_VIEW_LOCALSTORAGE_KEY } from 'shared/const/localstorage';
 import { SortOrder } from 'shared/types';
 import { ArticlesPageSchema } from '../types/articlesPageSchema';
 import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList';
@@ -35,7 +36,7 @@ const articlesPageSlice = createSlice({
     reducers: {
         setView: (state, action: PayloadAction<ArticleView>) => {
             state.view = action.payload;
-            localStorage.setItem(ARTCLE_VIEW_LOCALSTORAGE_KEY, action.payload);
+            localStorage.setItem(ARTICLES_VIEW_LOCALSTORAGE_KEY, action.payload);
         },
         setPage: (state, action: PayloadAction<number>) => {
             state.page = action.payload;
@@ -53,7 +54,7 @@ const articlesPageSlice = createSlice({
             state.search = action.payload;
         },
         initState: (state) => {
-            const view = localStorage.getItem(ARTCLE_VIEW_LOCALSTORAGE_KEY) as ArticleView;
+            const view = localStorage.getItem(ARTICLES_VIEW_LOCALSTORAGE_KEY) as ArticleView;
             state.view = view;
             state.limit = view === ArticleView.BIG ? 4 : 9;
             state._inited = true;
