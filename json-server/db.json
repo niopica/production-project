@@ -613,6 +613,12 @@
       "userId": "2",
       "text": "Джон сноу",
       "id": "nmdg-S7"
+    },
+    {
+      "articleId": "10",
+      "userId": "2",
+      "text": "new comments",
+      "id": "EUmpvnd"
     }
   ],
   "users": [
@@ -620,21 +626,27 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "roles": ["ADMIN"],
+      "roles": [
+        "ADMIN"
+      ],
       "avatar": "https://i.pinimg.com/736x/8d/ef/70/8def70c79605a10882436505c68faa05.jpg"
     },
     {
       "id": "2",
       "username": "user",
       "password": "123",
-      "roles": ["USER"],
+      "roles": [
+        "USER"
+      ],
       "avatar": "https://i.pinimg.com/736x/4e/7d/dd/4e7ddda493c3de2527062cca976666b3.jpg"
     },
     {
       "id": "3",
       "username": "manager",
       "password": "123",
-      "roles": ["MANAGER"],
+      "roles": [
+        "MANAGER"
+      ],
       "avatar": "https://i.pinimg.com/736x/8e/61/e7/8e61e7ce2dcbfc5230adbd3c6fa171e2.jpg"
     }
   ],
