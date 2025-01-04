@@ -22,6 +22,7 @@
     min-height: 100px;
     padding: 20px;
     transition: 0.3s transform;
+    transform: translateY(100%);
     overflow-y: auto;
     overflow-x: hidden;
     z-index: 10000;
@@ -46,5 +47,11 @@
 
     .content {
         transform: translateY(0%);
+    }
+}
+
+.isClosing {
+    .content {
+        transform: translateY(100%);
     }
 }
