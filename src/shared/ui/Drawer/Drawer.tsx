@@ -10,9 +10,9 @@ import { Overlay } from '../Overlay/Overlay';
 
 interface DrawerProps {
     className?: string;
-    children: ReactNode;
-    isOpen: boolean;
-    onClose: () => void;
+    children?: ReactNode;
+    isOpen?: boolean;
+    onClose?: () => void;
     lazy?: boolean;
 }
 
@@ -27,6 +27,7 @@ export const DrawerContent = memo((props: DrawerProps) => {
         onClose,
         isOpen,
         children,
+        lazy,
     } = props;
 
     const openDrawer = useCallback(() => {

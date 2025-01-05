@@ -3,8 +3,8 @@ import {
 } from 'react';
 
 interface UseModalProps {
-    onClose: () => void;
-    isOpen: boolean;
+    onClose?: () => void;
+    isOpen?: boolean;
     lazy?: boolean;
     animationDelay?: number;
 
