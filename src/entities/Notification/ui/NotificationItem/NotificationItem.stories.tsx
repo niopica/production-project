@@ -1,6 +1,13 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
+import withMock from 'storybook-addon-mock';
 import { NotificationItem } from './NotificationItem';
+
+const item = {
+    id: '1',
+    title: 'Уведомление 1',
+    description: 'Описание',
+};
 
 export default {
     title: 'entities/Notification/NotificationItem',
@@ -13,4 +20,6 @@ export default {
 const Template: ComponentStory<typeof NotificationItem> = (args) => <NotificationItem {...args} />;
 
 export const Normal = Template.bind({});
-Normal.args = {};
+Normal.args = {
+    item,
+};
