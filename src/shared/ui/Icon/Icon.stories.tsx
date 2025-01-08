@@ -1,17 +1,16 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-
-import { Page } from './Page';
+import { Icon } from './Icon';
 
 export default {
-    title: 'widgets/Page',
-    component: Page,
+    title: 'shared/Icon',
+    component: Icon,
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-} as ComponentMeta<typeof Page>;
+} as ComponentMeta<typeof Icon>;
 
-const Template: ComponentStory<typeof Page> = (args) => <Page {...args} />;
+const Template: ComponentStory<typeof Icon> = (args) => <Icon {...args} />;
 
 export const Normal = Template.bind({});
 Normal.args = {};

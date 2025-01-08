@@ -1,17 +1,16 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-
-import { Page } from './Page';
+import AdminPanelPage from './AdminPanelPage';
 
 export default {
-    title: 'widgets/Page',
-    component: Page,
+    title: 'pages/AdminPanelPage',
+    component: AdminPanelPage,
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-} as ComponentMeta<typeof Page>;
+} as ComponentMeta<typeof AdminPanelPage>;
 
-const Template: ComponentStory<typeof Page> = (args) => <Page {...args} />;
+const Template: ComponentStory<typeof AdminPanelPage> = () => <AdminPanelPage />;
 
 export const Normal = Template.bind({});
 Normal.args = {};

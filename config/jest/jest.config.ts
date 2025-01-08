@@ -45,7 +45,7 @@ export default {
         ['jest-html-reporters', {
             publicPath: '<rootDir>/reports/unit',
             filename: 'report.html',
-            openReporter: true,
+            // openReport: true,
             inlineSource: true,
         }],
     ],

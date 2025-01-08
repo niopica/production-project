@@ -1,17 +1,16 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-
-import { Page } from './Page';
+import { VStack } from './VStack';
 
 export default {
-    title: 'widgets/Page',
-    component: Page,
+    title: 'shared/VStack',
+    component: VStack,
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-} as ComponentMeta<typeof Page>;
+} as ComponentMeta<typeof VStack>;
 
-const Template: ComponentStory<typeof Page> = (args) => <Page {...args} />;
+const Template: ComponentStory<typeof VStack> = (args) => <VStack {...args} />;
 
 export const Normal = Template.bind({});
 Normal.args = {};

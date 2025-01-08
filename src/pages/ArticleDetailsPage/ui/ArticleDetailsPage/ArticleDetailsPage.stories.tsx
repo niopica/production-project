@@ -7,7 +7,7 @@ import { ArticleBlockType } from '@/entities/Article/model/consts/articleConsts'
 import ArticleDetailsPage from './ArticleDetailsPage';
 
 export default {
-    title: 'pages/ArticleDetailsPage',
+    title: 'pages/Article/ArticleDetailsPage',
     component: ArticleDetailsPage,
     argTypes: {
         backgroundColor: { control: 'color' },

@@ -6,7 +6,7 @@ import {
 } from './EditableProfileCardHeader';
 
 export default {
-    title: 'features/EditableProfileCardHeader',
+    title: 'features/Editable/EditableProfileCardHeader',
     component: EditableProfileCardHeader,
     argTypes: {
         backgroundColor: { control: 'color' },

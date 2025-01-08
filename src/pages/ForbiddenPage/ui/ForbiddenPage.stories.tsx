@@ -1,17 +1,16 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-
-import { Page } from './Page';
+import ForbiddenPage from './ForbiddenPage';
 
 export default {
-    title: 'widgets/Page',
-    component: Page,
+    title: 'pages/ForbiddenPage',
+    component: ForbiddenPage,
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-} as ComponentMeta<typeof Page>;
+} as ComponentMeta<typeof ForbiddenPage>;
 
-const Template: ComponentStory<typeof Page> = (args) => <Page {...args} />;
+const Template: ComponentStory<typeof ForbiddenPage> = () => <ForbiddenPage />;
 
 export const Normal = Template.bind({});
 Normal.args = {};
