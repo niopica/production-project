@@ -71,7 +71,12 @@ module.exports = {
         'react/no-array-index-key': 'off',
         'arrow-body-style': 'off',
         'niopica-plugin/path-checker': ['error', { alias: '@' }],
-        'niopica-plugin/public-api-imports': ['error', { alias: '@' }],
+        'niopica-plugin/public-api-imports': ['error',
+            {
+                alias: '@',
+                testFilesPatterns: ['**/*.test.*', '**/*.story.*', '**/StoreDecorator.tsx'],
+            },
+        ],
     },
     globals: {
         __IS_DEV__: true,
