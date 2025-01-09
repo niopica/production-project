@@ -1,3 +1,4 @@
+// eslint-disable-next-line niopica-plugin/layer-imports
 import '@/app/styles/index.scss';
 import { Story } from '@storybook/react';
 

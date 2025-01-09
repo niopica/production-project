@@ -71,6 +71,13 @@ module.exports = {
         'react/no-array-index-key': 'off',
         'arrow-body-style': 'off',
         'niopica-plugin/path-checker': ['error', { alias: '@' }],
+        'niopica-plugin/layer-imports': [
+            'error',
+            {
+                alias: '@',
+                ignoreImportPatterns: ['**/StoreProvider', '**/testing'],
+            },
+        ],
         'niopica-plugin/public-api-imports': ['error',
             {
                 alias: '@',
